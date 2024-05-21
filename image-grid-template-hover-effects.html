@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        box-sizing: border-box;
+                        background-color: black;
+                }
+                      .containar {
+                        position: relative;
+                        display: grid;
+                        width: 600px;
+                        grid-gap: 17px;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 140px 140px 140px 140px;
+                        grid-template-areas: "img1 img3 img4"
+                                             "img1 img3 img6"
+                                             "img2 img3 img6"
+                                             "img2 img5 img5";
+
+                }
+
+                .containar .img1{
+                        grid-area: img1;
+                }
+
+                .containar .img2{
+                        grid-area: img2;
+                }
+
+                .containar .img3{
+                        grid-area: img3;
+                }
+
+                .containar .img4{
+                        grid-area: img4;
+                }
+
+                .containar .img5{
+                        grid-area:img5;
+                }
+
+                .containar .img6{
+                        grid-area: img6;
+                }
+
+                .containar .item{
+                        position: relative;
+                        /* background-color: aliceblue; */
+                }
+                .containar .item img{
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.5s;
+                        border-radius: 10px;
+                }
+                .containar:hover .item img:not(:hover){
+                        filter: grayscale(1);
+                        opacity: o.5;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="containar">
+                <div class="item img1"><img src="./photos/download.jpeg" alt=""></div>
+                <div class="item img2"><img src="./photos/images -1.jpeg" alt=""></div>
+                <div class="item img3"><img src="./photos/images.jpeg" alt=""></div>
+                <div class="item img4"><img src="./photos/thumb__800_0_0_0_crop.jpg" alt=""></div>
+                <div class="item img5"><img src="./photos/download.jpeg" alt=""></div>
+                <div class="item img6"><img src="./photos/images -1.jpeg" alt=""></div>
+        </div>
+</body>
+
+</html>
